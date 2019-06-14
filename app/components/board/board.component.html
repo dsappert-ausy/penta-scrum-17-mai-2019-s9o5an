@@ -1,0 +1,17 @@
+<div class="header">
+<p>hello world</p>
+</div>
+<div class="group">
+  <input type="text" (keyup)="assigneeFilterSubject$.next($event.target.value)">
+  <span class="highlight"></span>
+  <span class="bar"></span>
+  <label>Filter by Assignee</label>
+
+</div>
+
+<div class="board">
+  <app-column
+    *ngFor="let column of columns"
+    title={{column.title}}
+    id={{column.columnId}}></app-column>
+</div>
